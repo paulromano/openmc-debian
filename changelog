@@ -1,0 +1,23 @@
+openmc (0.5.3-0ppa1) raring; urgency=low
+
+  * Version 0.5.3.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Tue, 19 Nov 2013 19:40:53 -0500
+
+openmc (0.5.1rc2-0ppa2) quantal; urgency=low
+
+  * Fixed MPICH2 dependencies.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 22 Feb 2013 19:59:23 -0500
+
+openmc (0.5.1rc2-0ppa1) quantal; urgency=low
+
+  * Version 0.5.1 release candidate 2.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 22 Feb 2013 15:13:21 -0500
+
+openmc (0.5.1rc1-0ppa1) quantal; urgency=low
+
+  * Pre-release of version 0.5.1.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Tue, 29 Jan 2013 21:47:00 -0500

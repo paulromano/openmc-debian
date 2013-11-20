@@ -1,0 +1,16 @@
+Source: openmc
+Maintainer: Paul Romano <paul.k.romano@gmail.com>
+Section: misc
+Priority: optional
+Homepage: http://mit-crpg.github.io/openmc
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 8), gfortran (>= 4.6.0)
+
+Package: openmc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Replaces: openmc (<< 0.5.2)
+Description: Open source Monte Carlo neutron transport code
+ OpenMC is a 3D constructive solid geometry, continuous-energy Monte Carlo
+ neutron transport code written in Fortran 2008. Particle interaction data is
+ based on ACE format cross sections, and user input is given in an XML format.

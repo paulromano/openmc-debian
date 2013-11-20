@@ -1,0 +1,7 @@
+#!/usr/bin/make -f
+%:
+	dh $@ --sourcedirectory=src
+override_dh_auto_build:
+	dh_auto_build --sourcedirectory=src -- F90=/usr/bin/mpif90.mpich2 OPTIMIZE=yes OPENMP=yes
+override_dh_auto_install:
+	dh_auto_install --sourcedirectory=src -- prefix=/usr
