@@ -1,0 +1,8 @@
+# Emacs temporaries
+*~
+
+# Debian packages build files
+*.tar.gz
+*.dsc
+*_source.changes
+*_source.build
