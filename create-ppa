@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [[ $# -ne 1 ]]; then
+    echo Usage: create-ppa version
+    exit 1
+fi
+
+version=$1
+
+# Step 1 -- get OpenMC source and create an archive given the tag
+git clone git@github.com:mit-crpg/openmc.git 
+cd openmc
+git archive --prefix=openmc-${version}/ v${version} | \
+    gzip -9 > ../openmc_${version}.orig.tar.gz
+cd ..
+rm -rf openmc
+
+# Step 2 -- Extract created archive and copy debian files
+tar xvf openmc_${version}.orig.tar.gz
+cd openmc-${version}
+cp -R ../debian-files debian
+
+# Step 3 -- Edit changelog
+dch -v ${version}-0ppa1 --package openmc \
+    -D $(lsb_release -c | awk '{print $2}')
+cp debian/changelog ../debian-files/
+
+# Step 4 -- Build the Debian package
+debuild -S -sa
+cd ..
+
+# Step 5 -- Upload to launchpad
+echo -e "Now run \e[32mdput ppa:paulromano/staging openmc_${version}-0ppa1_source.changes\e[0m"
