@@ -1,3 +1,9 @@
+openmc (0.5.4beta-0ppa1) saucy; urgency=low
+
+  * Pre-release of version 0.5.4.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 07 Mar 2014 20:42:09 -0500
+
 openmc (0.5.3-0ppa1) raring; urgency=low
 
   * Version 0.5.3.
