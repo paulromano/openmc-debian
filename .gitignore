@@ -6,3 +6,7 @@
 *.dsc
 *_source.changes
 *_source.build
+*_source.ppa.upload
+
+# OpenMC directories
+openmc-*/*
