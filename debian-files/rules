@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 %:
-	dh $@ --sourcedirectory=src
-override_dh_auto_build:
-	dh_auto_build --sourcedirectory=src -- F90=/usr/bin/gfortran OPTIMIZE=yes OPENMP=yes
-override_dh_auto_install:
-	dh_auto_install --sourcedirectory=src -- prefix=/usr
+	dh $@ --sourcedirectory=src --builddirectory=build
+override_dh_auto_configure:
+	dh_auto_configure -- -Doptimize=on -Dopenmp=on -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
