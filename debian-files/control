@@ -3,7 +3,7 @@ Maintainer: Paul Romano <paul.k.romano@gmail.com>
 Section: misc
 Priority: optional
 Homepage: http://mit-crpg.github.io/openmc
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Build-Depends: debhelper (>= 8), gfortran (>= 4.6.0), cmake (>= 2.8)
 
 Package: openmc
