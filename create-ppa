@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Check for appropriate number of arguments
 if [[ $# -ne 1 ]]; then
     echo Usage: create-ppa version
@@ -10,12 +12,14 @@ fi
 version=${1//-/}
 
 # Step 1 -- get OpenMC source and create an archive given the tag
-git clone git@github.com:mit-crpg/openmc.git 
-cd openmc
-git archive --prefix=openmc-${version}/ v$1 | \
-    gzip -9 > ../openmc_${version}.orig.tar.gz
-cd ..
-rm -rf openmc
+if [[ ! -e openmc_${version}.orig.tar.gz ]]; then
+    git clone --recursive git@github.com:mit-crpg/openmc.git
+    cd openmc
+    ../git-archive-all.sh --prefix openmc-${version}/ -t v${version} ../openmc_${version}.orig.tar
+    cd ..
+    gzip -n openmc_${version}.orig.tar
+    rm -rf openmc
+fi
 
 # Step 2 -- Extract created archive and copy debian files
 tar xvf openmc_${version}.orig.tar.gz
