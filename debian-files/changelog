@@ -1,3 +1,9 @@
+openmc (0.6.2.1-0ppa3) utopic; urgency=medium
+
+  * Version 0.6.2.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Mon, 25 May 2015 09:03:49 +0700
+
 openmc (0.5.4-0ppa1) saucy; urgency=low
 
   * Version 0.5.4.
