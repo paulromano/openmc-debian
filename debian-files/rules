@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 %:
-	dh $@ --sourcedirectory=src --builddirectory=build
+	dh $@ --buildsystem=cmake --builddirectory=build --with python2
 override_dh_auto_configure:
-	dh_auto_configure -- -Doptimize=on -Dopenmp=on -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
+	dh_auto_configure -- -Ddebian=on -Doptimize=on -Dopenmp=on -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=Release
 override_dh_auto_test:
 	echo "Skip dh_auto_test"
