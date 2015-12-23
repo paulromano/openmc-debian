@@ -11,6 +11,12 @@ fi
 # First argument is version (remove any hyphens)
 version=${1//-/}
 
+# Only Ubuntu 15.04+ support HDF5 with F2003 API
+# 15.04 = vivid
+# 15.10 = wily
+# 16.04 = xenial
+release=wily
+
 # Step 1 -- get OpenMC source and create an archive given the tag
 if [[ ! -e openmc_${version}.orig.tar.gz ]]; then
     git clone --recursive git@github.com:mit-crpg/openmc.git
@@ -27,8 +33,8 @@ cd openmc-${version}
 cp -R ../debian-files debian
 
 # Step 3 -- Edit changelog
-dch -v ${version}-0ppa1 --package openmc \
-    -D $(lsb_release -c | awk '{print $2}')
+dch -b -v ${version}-0ubuntu1~${release}ppa1 --package openmc \
+    -D ${release}
 cp debian/changelog ../debian-files/
 
 # Step 4 -- Build the Debian package
@@ -36,4 +42,4 @@ debuild -S -sa
 cd ..
 
 # Step 5 -- Upload to launchpad
-echo -e "Now run \e[34mdput ppa:paulromano/staging openmc_${version}-0ppa1_source.changes\e[0m"
+echo -e "Now run \e[34mdput ppa:paulromano/staging openmc_${version}-0ubuntu1~${release}ppa1_source.changes\e[0m"

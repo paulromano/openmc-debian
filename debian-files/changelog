@@ -1,3 +1,45 @@
+openmc (0.7.1-0ubuntu1~wilyppa1) wily; urgency=medium
+
+  * Version 0.7.1 on wily.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Wed, 23 Dec 2015 16:10:09 -0600
+
+openmc (0.7.1~alpha5-0ubuntu1~vividppa1) vivid; urgency=medium
+
+  * i386 HDF5 build issue again
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 04 Dec 2015 20:40:49 -0600
+
+openmc (0.7.1~alpha4-0ubuntu1~vividppa1) vivid; urgency=medium
+
+  * Fix i386 HDF5 build issue
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 04 Dec 2015 20:34:35 -0600
+
+openmc (0.7.1~alpha3-0ubuntu1~vividppa1) vivid; urgency=medium
+
+  * Add HDF5 dependency
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 04 Dec 2015 11:48:02 -0600
+
+openmc (0.7.1~alpha2-0ubuntu1~vividppa1) vivid; urgency=medium
+
+  * Fix some packaging issues
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 04 Dec 2015 11:38:46 -0600
+
+openmc (0.7.1~alpha1-0ubuntu1~vividppa1) vivid; urgency=medium
+
+  * Pre-release of version 0.7.1 for vivid.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Fri, 04 Dec 2015 08:37:03 -0600
+
+openmc (0.7.0-0ppa1) vivid; urgency=medium
+
+  * Version 0.7.0.
+
+ -- Paul Romano <paul.k.romano@gmail.com>  Mon, 12 Oct 2015 07:41:59 +0700
+
 openmc (0.6.2.1-0ppa3) utopic; urgency=medium
 
   * Version 0.6.2.
